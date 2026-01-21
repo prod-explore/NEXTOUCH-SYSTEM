@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>License Activated — Nextouch</title>
+    <link rel="icon" type="image/png" href="/assets/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050508;
+            --text: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.65);
+            --text-muted: rgba(255, 255, 255, 0.4);
+            --accent: #8b5cf6;
+            --accent-glow: rgba(139, 92, 246, 0.4);
+            --accent-dim: rgba(139, 92, 246, 0.15);
+            --border: rgba(255, 255, 255, 0.08);
+            --success: #22c55e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 520px;
+            width: 100%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 48px;
+            opacity: 0.7;
+        }
+
+        .logo img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .logo span {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(34, 197, 94, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 32px;
+        }
+
+        .success-icon svg {
+            width: 40px;
+            height: 40px;
+            stroke: var(--success);
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 17px;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .license-box {
+            background: linear-gradient(180deg, rgba(139, 92, 246, 0.1) 0%, rgba(139, 92, 246, 0.05) 100%);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 32px;
+        }
+
+        .license-box label {
+            display: block;
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .license-key {
+            font-family: 'Orbitron', monospace;
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, var(--accent), #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            word-break: break-all;
+            margin-bottom: 20px;
+        }
+
+        .copy-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            padding: 12px 28px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .copy-btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+            color: var(--text);
+        }
+
+        .instructions {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        .instructions h3 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+        }
+
+        .instructions ol {
+            padding-left: 24px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .instructions li {
+            margin-bottom: 8px;
+        }
+
+        .back-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--text);
+        }
+
+        .loading {
+            color: var(--text-muted);
+        }
+
+        .error {
+            color: #ef4444;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="/assets/icon.png" alt="Nextouch">
+            <span>NEXTOUCH</span>
+        </div>
+
+        <div class="success-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5" />
+            </svg>
+        </div>
+
+        <h1>Thank You</h1>
+        <p class="subtitle">Your payment was successful. Your Pro license key is ready.</p>
+
+        <div class="license-box">
+            <label>Your License Key</label>
+            <div class="license-key" id="licenseKey">Loading...</div>
+            <button class="copy-btn" id="copyBtn" style="display: none;">Copy to Clipboard</button>
+        </div>
+
+        <div class="instructions">
+            <h3>How to activate</h3>
+            <ol>
+                <li>Open the Nextouch Desktop application</li>
+                <li>Click the Nextouch icon in your system tray</li>
+                <li>Paste your license key into the input field</li>
+                <li>Click "Activate Pro" — you're done</li>
+            </ol>
+        </div>
+
+        <a href="/" class="back-link">← Back to Home</a>
+    </div>
+
+    <script>
+        async function getLicense() {
+            const params = new URLSearchParams(window.location.search);
+            const sessionId = params.get('session_id');
+
+            if (!sessionId) {
+                document.getElementById('licenseKey').textContent = 'Missing session ID';
+                document.getElementById('licenseKey').classList.add('error');
+                return;
+            }
+
+            try {
+                const res = await fetch(`/api/get-license/${sessionId}`);
+                const data = await res.json();
+
+                if (data.success) {
+                    document.getElementById('licenseKey').textContent = data.licenseKey;
+                    document.getElementById('copyBtn').style.display = 'inline-block';
+                } else {
+                    document.getElementById('licenseKey').textContent = 'License not found. Please contact support.';
+                    document.getElementById('licenseKey').classList.add('error');
+                }
+            } catch (err) {
+                document.getElementById('licenseKey').textContent = 'Error loading license. Please refresh.';
+                document.getElementById('licenseKey').classList.add('error');
+            }
+        }
+
+        document.getElementById('copyBtn').addEventListener('click', () => {
+            const key = document.getElementById('licenseKey').textContent;
+            navigator.clipboard.writeText(key).then(() => {
+                document.getElementById('copyBtn').textContent = 'Copied!';
+                setTimeout(() => {
+                    document.getElementById('copyBtn').textContent = 'Copy to Clipboard';
+                }, 2000);
+            });
+        });
+
+        getLicense();
+    </script>
+</body>
+
+</html>

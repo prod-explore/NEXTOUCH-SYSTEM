@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "Nextouch",
+    "slug": "Nextouch",
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/images/nextouch_logo.png",
+    "scheme": "mobile",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/nextouch_logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.nextouch.app"
+    },
+    "android": {
+      "package": "com.nextouch.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/nextouch_logo.png",
+        "backgroundColor": "#000000"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "usesCleartextTraffic": true
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/nextouch_logo.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "385facb4-cc64-4eee-bcbf-cee0e8528671"
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+# General
+node_modules/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+.env
+.env.local
+*backup*
+*Backup*
+*.exe
+*.dll
+*.apk
+test_mousedown.js
+net_debug.txt
+temp_*.js
+
+
+
+# Desktop (Electron)
+desktop/dist/
+desktop/release/
+desktop/build/
+desktop/Nextouch-win32-x64/
+!desktop/build/icon.*
+!desktop/build/installer.nsh
+
+# Mobile (React Native / Expo)
+mobile/.expo/
+mobile/android/app/build/
+mobile/android/.gradle/
+mobile/ios/build/
+mobile/ios/Pods/
+mobile/*.apk
+mobile/*.aab
+
+# Website
+website/frontend/html/downloads/*.exe
+website/frontend/html/downloads/*.apk
+website/frontend/html/downloads/*.zip
