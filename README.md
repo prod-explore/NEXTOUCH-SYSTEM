@@ -80,7 +80,7 @@ This project demonstrates a full-stack implementation of a real-time, low-latenc
 
 ## 🔒 Licensing & Usage
 
-**© Copyright 2026 Nextouch / [Your Name]. All Rights Reserved.**
+**© Copyright 2026 Nextouch / FUTUMORE. All Rights Reserved.**
 
 **Proprietary Software.**  
 This source code is published on GitHub **solely for portfolio and technical review purposes**.
