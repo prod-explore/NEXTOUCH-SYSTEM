@@ -5,7 +5,7 @@
 
 <img src="website/frontend/html/og-image.png" width="600" alt="Nextouch Banner">
 
-## � Get the App
+## 📲 Get the App
 
 **Download Ready-to-Use Installers:**  
 👉 **[Official Website (nextouch.futumore.pl)](https://nextouch.futumore.pl)**
